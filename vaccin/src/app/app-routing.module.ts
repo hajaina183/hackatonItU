@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
- 
   {
     path: 'inscription',
     loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
@@ -44,10 +43,6 @@ const routes: Routes = [
     path: 'accueiladmin',
     loadChildren: () => import('./accueiladmin/accueiladmin.module').then( m => m.AccueiladminPageModule)
   },
-  {
-    path: 'etatstock',
-    loadChildren: () => import('./etatstock/etatstock.module').then( m => m.EtatstockPageModule)
-  },
   
   {
     path: 'cherche',
@@ -68,8 +63,7 @@ const routes: Routes = [
   {
     path: 'stock',
     loadChildren: () => import('./stock/stock.module').then( m => m.StockPageModule)
-  },
-
+  }
 
 ];
 

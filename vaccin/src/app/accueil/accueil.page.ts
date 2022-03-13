@@ -14,8 +14,7 @@ export class AccueilPage implements OnInit {
   }
 
   creationCompte(){
-        console.log("atoooo");
-        this.router.navigate(['/home']);
+    this.router.navigate(['/inscription']);
   }
   listeVaccinJour(){
     this.router.navigate(['/vaccinj']);
