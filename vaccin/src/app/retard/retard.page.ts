@@ -16,5 +16,9 @@ export class RetardPage implements OnInit {
     this.router.navigate(['/accueiladmin']);
   }
 
+  showAlert(){
+    console.log("ok");
+  }
+
 
 }
