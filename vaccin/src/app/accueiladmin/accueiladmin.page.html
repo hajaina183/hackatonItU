@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form (ngSubmit)="creationCompte()">
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Créer compte</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <form (ngSubmit)="listeVaccinJour()">
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Listes des vaccins aujourd'hui</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <form (ngSubmit)="reNotifier()">
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Re-attribuer une date</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <form (ngSubmit)="listeVaccinRetard()">
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Liste des retards</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <form (ngSubmit)="etatStock()">
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Etat de stock</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

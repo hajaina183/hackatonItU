@@ -1,0 +1,12 @@
+<ion-content>
+  <ion-item>
+    <ion-label>Date du nouveau rendez-vous</ion-label>
+
+    <ion-button (click)="CloseModal()" size="small" slot="end" color="danger">close</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-text>
+      <h3>Date : {{date | date:'yyyy-MM-dd'}}</h3>
+    </ion-text>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-content>
+  <h3>Re-attribuer une date </h3>
+  <form (ngSubmit)="chercher()">
+  <ion-item lines="full">
+    <ion-label position="floating">Nom : </ion-label>
+    <ion-input type="password"  name="mdp"></ion-input>
+  </ion-item>
+  <ion-item lines="full">
+    <ion-label position="floating">CIN : </ion-label>
+    <ion-input type="password"  name="mdp"></ion-input>
+  </ion-item>
+  <ion-row>
+    <ion-col>
+      <center style="margin-left: 70%;"><ion-button type="submit" color="danger" expand="block">Chercher</ion-button></center>
+    </ion-col>
+  </ion-row>
+ </form>
+  <table id="customers">
+      <tr>
+          <td>Nom</td>
+          <td>Type Vaccin</td>
+          <td>CIN</td>
+          <td>Validation</td>
+      </tr>
+      <tr>
+          <td>Rakotomalala Naivo</td>
+          <td>Janssen</td>
+          <td>101235369456</td>
+          <td><center style="margin-top: 10%;"><ion-button type="submit" color="danger" expand="block" (click)="OpenModal()">Donner une date</ion-button></center></td>
+      </tr>
+      <tr>
+        <td>Andriandrasana Felana</td>
+        <td>Pfizer</td>
+        <td>102352963589</td>
+        <td><center style="margin-top: 10%;"><ion-button type="submit" color="danger" expand="block" (click)="OpenModal()">Donner une date</ion-button></center></td>
+      </tr>
+  </table>
+  <form (ngSubmit)="retour()">
+    <ion-row>
+      <ion-col>
+        <center style="margin-right: 70%;"><ion-button type="submit" color="danger" expand="block">Retour</ion-button></center>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
