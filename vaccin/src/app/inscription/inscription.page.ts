@@ -25,6 +25,7 @@ export class InscriptionPage implements OnInit {
     v.dose = Number(this.formulaire.dose);
     v.date = new Date(this.formulaire.date);
     this.vaccins.push(v);
+    this.router.navigate(['/inscription']);
   }
 
   s_inscrire() {

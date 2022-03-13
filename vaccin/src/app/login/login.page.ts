@@ -22,10 +22,10 @@ export class LoginPage implements OnInit {
     this.mdp = this.formulaire.mdp;
     console.log("login"+this.login)
     console.log("mdp"+this.mdp)
-    if(this.login=="anita" && this.mdp=="1234"){
+    if(this.login=="travailleur@gmail.com" && this.mdp=="1234"){
         console.log("ok");
         this.router.navigate(['/accueil']);
-    }else if(this.login=="admin" && this.mdp=="1234"){
+    }else if(this.login=="admin@gmail.com" && this.mdp=="1234"){
       this.router.navigate(['/accueiladmin']);
     }else{
       const toast = await this.toastController.create({

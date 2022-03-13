@@ -7,6 +7,12 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
+  <div class="clearfix">
+    <ion-img class="img2" style="width: 100px; height: 50px;" src="./assets/icon/salut.jpg"></ion-img>
+    <ion-text class="texte">
+      <h1>Saluez le patient !! </h1>
+    </ion-text>
+  </div>
   <form (ngSubmit)="creationCompte()">
     <ion-row>
       <ion-col>
@@ -28,4 +34,11 @@
       </ion-col>
     </ion-row>
   </form>
+  <ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" (click)="deconnexion()">Deconnecter</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-item>
 </ion-content>

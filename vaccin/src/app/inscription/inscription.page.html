@@ -6,13 +6,12 @@
 
 <ion-content>
   <div class="clearfix">
-    <ion-img class="img2" style="width: 100px; height: 100px;" src="./assets/icon/sourire.webp"></ion-img>
+    <ion-img class="img2" style="width: 50px; height: 50px;" src="./assets/icon/sourire.webp"></ion-img>
     <ion-text class="texte">
-      <br>
       <h1>Souriez au patient !! </h1>
     </ion-text>
   </div>
-  <form (ngSubmit) = "s_inscrire()">
+  <form>
     <ion-item lines="full">
       <ion-label position="floating">Nom</ion-label>
       <ion-input type="text" required></ion-input>
@@ -150,7 +149,7 @@
     </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block">S'inscrire</ion-button>
+        <ion-button (click)="s_inscrire()" type="submit" color="danger" expand="block">S'inscrire</ion-button>
       </ion-col>
     </ion-row>
   </form>
