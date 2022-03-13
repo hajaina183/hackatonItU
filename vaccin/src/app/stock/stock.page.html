@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Demande de stock</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit) = "changerPage()">
+    <ion-item>
+      <ion-label>Type de vaccin</ion-label>
+      <ion-select>
+        <ion-select-option value="PFizer">PFizer</ion-select-option>
+        <ion-select-option value="Janssen">Janssen</ion-select-option>
+        <ion-select-option value="AstraZeneca">AstraZeneca</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Quantité</ion-label>
+      <ion-input type="number" required></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Envoyer</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

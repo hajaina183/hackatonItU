@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Choix d'un vaccin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit) = "OpenModal()">
+    <ion-item>
+      <ion-label>Type de vaccin</ion-label>
+      <ion-select>
+        <ion-select-option value="PFizer">PFizer</ion-select-option>
+        <ion-select-option value="Janssen">Janssen</ion-select-option>
+        <ion-select-option value="AstraZeneca">AstraZeneca</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Valider</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

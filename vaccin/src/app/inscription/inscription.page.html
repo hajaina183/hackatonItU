@@ -1,0 +1,157 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="clearfix">
+    <ion-img class="img2" style="width: 100px; height: 100px;" src="./assets/icon/sourire.webp"></ion-img>
+    <ion-text class="texte">
+      <br>
+      <h1>Souriez au patient !! </h1>
+    </ion-text>
+  </div>
+  <form (ngSubmit) = "s_inscrire()">
+    <ion-item lines="full">
+      <ion-label position="floating">Nom</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Prénom</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Date de naissance</ion-label>
+      <ion-input type="date" required></ion-input>
+    </ion-item>
+    <ion-list>
+      <ion-radio-group value="biff">
+        <ion-list-header>
+          <ion-label>Sexe</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Homme</ion-label>
+          <ion-radio slot="start" value="homme"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Femme</ion-label>
+          <ion-radio slot="start" value="femme"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Autres</ion-label>
+          <ion-radio slot="start" value="autres"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-item lines="full">
+      <ion-label position="floating">Adresse</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">N° CIN</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">N° téléphone</ion-label>
+      <ion-input type="number" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input type="password" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Confirmer mot de passe</ion-label>
+      <ion-input type="password" required></ion-input>
+    </ion-item>
+    <ion-list>
+      <ion-radio-group value="biff">
+        <ion-list-header>
+          <ion-label>Est enceinte</ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Oui</ion-label>
+          <ion-radio slot="start" value="oui"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Non</ion-label>
+          <ion-radio slot="start" value="non"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-item>
+      <ion-label>Maladie chronique/héréditaire</ion-label>
+      <ion-select multiple="true" cancelText="Annuler" okText="Valider">
+        <ion-select-option value="Asthme">Asthme</ion-select-option>
+        <ion-select-option value="Arthrose">Arthrose</ion-select-option>
+        <ion-select-option value="Hypertension">Hypertension</ion-select-option>
+        <ion-select-option value="Diabète">Diabète</ion-select-option>
+        <ion-select-option value="Leucémie">Leucémie</ion-select-option>
+        <ion-select-option value="Epilepsie">Epilepsie</ion-select-option>
+        <ion-select-option value="Cancer">Cancer</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Allergie</ion-label>
+      <ion-select multiple="true" cancelText="Annuler" okText="Valider">
+        <ion-select-option value="Antibiotiques">Antibiotiques</ion-select-option>
+        <ion-select-option value="Penicilline">Penicilline</ion-select-option>
+        <ion-select-option value="Anti-inflammatoires">Anti-inflammatoires</ion-select-option>
+        <ion-select-option value="Antibactériens">Antibactériens</ion-select-option>
+        <ion-select-option value="Iode">Iode</ion-select-option>
+        <ion-select-option value="Aspirine">Aspirine</ion-select-option>
+        <ion-select-option value="Sulfamides">Sulfamides</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Vaccin covid-19 déjà administré</ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label position="floating">Type</ion-label>
+            <ion-select name="dose" [(ngModel)]="formulaire.type">
+              <ion-select-option value="PFizer">PFizer</ion-select-option>
+              <ion-select-option value="Janssen">Janssen</ion-select-option>
+              <ion-select-option value="AstraZeneca">AstraZeneca</ion-select-option>
+            </ion-select>
+          </ion-col>
+          <ion-col>
+            <ion-input type="text" name="dose" [(ngModel)]="formulaire.dose" required>Dose</ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-input type="date" name="date" [(ngModel)]="formulaire.date" required></ion-input>
+          </ion-col>
+          <ion-col>
+            <button (click)="ajouter()"><ion-icon name="add-outline"></ion-icon></button>
+        </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>Type de vaccin</ion-col>
+          <ion-col>Dose</ion-col>
+          <ion-col>Date</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let vaccin of vaccins">
+          <ion-col>{{vaccin.type}}</ion-col>
+          <ion-col>{{vaccin.dose}}</ion-col>
+          <ion-col>{{vaccin.date | date: 'yyyy-MM-dd'}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">S'inscrire</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

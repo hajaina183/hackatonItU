@@ -10,7 +10,27 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'inscription',
+    loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
   },
+  {
+    path: 'demande',
+    loadChildren: () => import('./demande/demande.module').then( m => m.DemandePageModule)
+  },
+  {
+    path: 'popup',
+    loadChildren: () => import('./popup/popup.module').then( m => m.PopupPageModule)
+  },
+  {
+    path: 'mouvement',
+    loadChildren: () => import('./mouvement/mouvement.module').then( m => m.MouvementPageModule)
+  },
+  {
+    path: 'stock',
+    loadChildren: () => import('./stock/stock.module').then( m => m.StockPageModule)
+  },
+
 ];
 
 @NgModule({
