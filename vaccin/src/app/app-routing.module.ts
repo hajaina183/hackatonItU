@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
- 
   {
     path: 'inscription',
     loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
@@ -18,12 +17,6 @@ const routes: Routes = [
   {
     path: 'mouvement',
     loadChildren: () => import('./mouvement/mouvement.module').then( m => m.MouvementPageModule)
-  },
-  {
-<<<<<<< HEAD
-    path: 'home',
-    redirectTo: 'home',
-    pathMatch: 'full'
   },
   {
     path: '',
@@ -45,10 +38,6 @@ const routes: Routes = [
     path: 'accueiladmin',
     loadChildren: () => import('./accueiladmin/accueiladmin.module').then( m => m.AccueiladminPageModule)
   },
-  {
-    path: 'etatstock',
-    loadChildren: () => import('./etatstock/etatstock.module').then( m => m.EtatstockPageModule)
-  },
   
   {
     path: 'cherche',
@@ -66,13 +55,15 @@ const routes: Routes = [
     path: 'retard',
     loadChildren: () => import('./retard/retard.module').then( m => m.RetardPageModule)
   },
-  
-];
-=======
+  {
+    path: 'home',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
     path: 'stock',
     loadChildren: () => import('./stock/stock.module').then( m => m.StockPageModule)
   },
->>>>>>> 8f0809c697f62d52cfdd448dddc399d2a44685b5
 
 ];
 

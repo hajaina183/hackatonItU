@@ -15,7 +15,7 @@ export class AccueiladminPage implements OnInit {
 
   creationCompte(){
     console.log("atoooo");
-    this.router.navigate(['/home']);
+    this.router.navigate(['/inscription']);
   }
   listeVaccinJour(){
   this.router.navigate(['/vaccinj']);
@@ -27,7 +27,7 @@ export class AccueiladminPage implements OnInit {
     this.router.navigate(['/retard']);
   }
   etatStock(){
-    this.router.navigate(['/etatstock']);
+    this.router.navigate(['/mouvement']);
   }
 
 }
