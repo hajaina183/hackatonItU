@@ -32,5 +32,9 @@ export class RetardPage implements OnInit {
     }).then(res => res.present())
   }
 
+  showAlert(){
+    console.log("ok");
+  }
+
 
 }

@@ -19,6 +19,11 @@ const routes: Routes = [
     loadChildren: () => import('./mouvement/mouvement.module').then( m => m.MouvementPageModule)
   },
   {
+    path: 'home',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
     path: '',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -56,14 +61,9 @@ const routes: Routes = [
     loadChildren: () => import('./retard/retard.module').then( m => m.RetardPageModule)
   },
   {
-    path: 'home',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
     path: 'stock',
     loadChildren: () => import('./stock/stock.module').then( m => m.StockPageModule)
-  },
+  }
 
 ];
 

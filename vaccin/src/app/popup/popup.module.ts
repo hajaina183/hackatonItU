@@ -7,11 +7,9 @@ import { IonicModule } from '@ionic/angular';
 import { PopupPageRoutingModule } from './popup-routing.module';
 
 import { PopupPage } from './popup.page';
-import { NgCalendarModule  } from 'ionic2-calendar';
 
 @NgModule({
   imports: [
-    NgCalendarModule,
     CommonModule,
     FormsModule,
     IonicModule,
