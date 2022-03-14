@@ -29,5 +29,8 @@ export class AccueiladminPage implements OnInit {
   etatStock(){
     this.router.navigate(['/mouvement']);
   }
+  deconnexion(){
+    this.router.navigate(['']);
+  }
 
 }

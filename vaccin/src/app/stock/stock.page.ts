@@ -17,4 +17,8 @@ export class StockPage implements OnInit {
     this.router.navigate(['/mouvement']);
   }
 
+  retour(){
+    this.router.navigate(['/accueiladmin']);
+  }
+
 }

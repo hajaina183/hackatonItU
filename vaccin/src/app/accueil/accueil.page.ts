@@ -22,5 +22,8 @@ export class AccueilPage implements OnInit {
   reNotifier(){
     this.router.navigate(['/renotifdate']);
   }
+  deconnexion(){
+    this.router.navigate(['']);
+  }
 
 }
