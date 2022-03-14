@@ -1,18 +1,18 @@
 <ion-content>
   <ion-item>
-    <ion-label>Calendrier de vaccin</ion-label>
+    <ion-label>Details du patient</ion-label>
     <ion-button (click)="CloseModal()" size="small" slot="end" color="danger">close</ion-button>
   </ion-item>
   <ion-card>
     <ion-card-header>
-      <ion-card-subtitle>Veillez le respecter</ion-card-subtitle>
+      <ion-card-subtitle>Veillez à ne pas oublier le prochain rendez-vous</ion-card-subtitle>
       <ion-card-title>
         <ion-card-content>
           <ion-text>
-            <h5>Dose 1 : 2022-03-04</h5>
+            <h5>Dose 1 : 2022-03-04 <ion-icon name="checkmark-circle-outline" color="success"></ion-icon></h5>
           </ion-text>
           <ion-text>
-            <h5>Dose 2 : 2022-05-04</h5>
+            <h5>Dose 2 : 2022-05-04 <ion-icon name="close-circle-outline" color="danger"></ion-icon></h5>
             <h5></h5>
           </ion-text>
         </ion-card-content>
